@@ -20,7 +20,18 @@ public class ChooseBookServlet extends HttpServlet{
                 cookieValue=cookies[i].getValue();
             }
         }
-        Cookie cookie=   new Cookie("bookHistory",cookieValue==null?"":(cookieValue+",")+req.getParameter("id"));
+        String newValue="";
+        String id=req.getParameter("id");
+        if(cookieValue==null||"".equals(cookieValue)){
+            newValue=id;
+        }else {
+            if(!cookieValue.contains(id)){
+                newValue=cookieValue+","+id;
+            }else {
+                newValue=cookieValue;
+            }
+        }
+        Cookie cookie=   new Cookie("bookHistory",newValue);
         cookie.setMaxAge(30*24*3600);
         resp.addCookie(cookie);
         resp.sendRedirect("/bookShopServlet");

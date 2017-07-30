@@ -30,20 +30,24 @@ public class BookShopServlet extends HttpServlet{
         Cookie[] cookies= req.getCookies();
         for(int i=0;cookies!=null&&i<cookies.length;i++){
             if("bookHistory".equals(cookies[i].getName())){
+                printWriter.print("cookie"+"  "+"bookHistory=");
                 printWriter.print(cookies[i].getValue()+"</br>");
                 String history=cookies[i].getValue();
                 if(history.startsWith(",")){
                     history= history.replaceFirst(",","");
                 }
                 String[] keys=history.split(",");
-                printWriter.print(history+"  "+keys.length+"</br>");
+
+
                 for(String k:keys){
-                    printWriter.print(books.get(k).getName()+"</br>");
+                    if(!"".equals(k)) {
+                        printWriter.print(books.get(k).getName() + "</br>");
+                    }
                 }
 
             }
         }
-
+        printWriter.print("<a href=\"/clearBooks\" >"+"清空"+"</a></br>");
 
 
     }

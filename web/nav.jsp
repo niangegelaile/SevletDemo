@@ -8,15 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" import="java.util.*" language="java"   %>
 <html>
   <head>
-    <title>jsp入门</title>
+    <title>页面导航</title>
   </head>
 
   <style>
-    #time{
-      margin-left: 20px;
-      float: left;
 
-    }
     #clear{
       clear: both;
     }
@@ -34,12 +30,10 @@
 
 
 
-    #angeTest{
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
+    a{
+      background-color :white;
     }
-    #angeTest:hover{
+   a:hover{
       background-color: red;
       cursor:hand;
     }
@@ -63,7 +57,7 @@
   </style>
 
   <body>
-      <div id="time">
+      <div >
         当前时间是：
           <%
             Date date=new Date();
@@ -71,29 +65,29 @@
             out.write(time);
           %>
       </div>
-
-      <div id="time">
-        <font color="red">
-          <%=time%>
-        </font>
+      <div>
+        <a href="/mservlet">Servlet的生命周期</a><br/>
+        <a href="/mGenericServlet">GenericServlet</a><br/>
+        <a href="/cookie">cookie记录上次登录时间</a><br/>
+        <a href="/bookShopServlet">cookie书店例子</a><br/>
+        <a href="/sessionServlet">session</a><br/>
       </div>
-      <div id="clear"></div>
 
-    <div id="ange">
-      <% for(int i=0;i<5;i++){%>
-      <h1 id="angeTest">你安哥哥来了</h1>
-      <% }%>
-    </div>
+    <%--<div id="ange">--%>
+      <%--<% for(int i=0;i<5;i++){%>--%>
+      <%--<h1 id="angeTest">你安哥哥来了</h1>--%>
+      <%--<% }%>--%>
+    <%--</div>--%>
 
-    <div id="aa">
-      <%
-        request.setAttribute("data","lalala");
-        String data=(String)pageContext.getAttribute("data",PageContext.REQUEST_SCOPE);
-        out.write(data);
-        String data1=(String)pageContext.findAttribute("data");
-        out.write(data1);
-      %>
-    </div>
+    <%--<div id="aa">--%>
+      <%--<%--%>
+        <%--request.setAttribute("data","lalala");--%>
+        <%--String data=(String)pageContext.getAttribute("data",PageContext.REQUEST_SCOPE);--%>
+        <%--out.write(data);--%>
+        <%--String data1=(String)pageContext.findAttribute("data");--%>
+        <%--out.write(data1);--%>
+      <%--%>--%>
+    <%--</div>--%>
 
 
 
