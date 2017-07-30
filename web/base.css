@@ -1,0 +1,106 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: 50px
+}
+
+.title {
+    width: 100%;
+    height: 10%;
+}
+
+.title_left {
+    text-align: center;
+    width: 30%;
+    background: white;
+    height: 100%;
+    float: left;
+    display: table;
+    padding-left: 10px;
+}
+.title_left span{
+    font-weight: 500;
+    font-size: 24px ;
+    font-family: 'Adobe Caslon Pro' ;
+    display: table-cell;
+    text-align: left;
+    margin-left: 2em;
+
+    vertical-align: middle;
+}
+.title_center {
+    align: center;
+    width: 40%;
+    height: 100%;
+    float: left
+}
+
+.title_right {
+    align: right;
+    width: 30%;
+    background: white;
+    height: 100%;
+    float: right
+}
+
+.title_bottom {
+    background: #7BBD39;
+    width: 100%;
+    height: 1px
+}
+
+.content {
+    background: url(http://img2.niutuku.com/desk/1208/1950/ntk-1950-27986.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    position: relative
+}
+
+.login_pan {
+    background: white;
+    width: 30%;
+    height: 200px;
+    position: absolute;
+    right: 80px;
+    top: 100px;
+    text-align: center;
+}
+
+
+
+
+
+/*居中父*/
+.bottom {
+    background: white;
+    width: 100%;
+    height: 10%;
+    display: table;
+    text-align: center;
+}
+/*居中子*/
+.bottom span{
+    font-weight: 500;
+    font-size: 24px ;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+}
+/*居中父*/
+.login_pan form {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+/*居中子*/
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}

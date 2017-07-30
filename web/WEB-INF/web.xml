@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>MServlet</servlet-name>
+        <servlet-class>com.demo.cookie.MServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MServlet</servlet-name>
+        <url-pattern>/mservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MGenericServlet</servlet-name>
+        <servlet-class>com.demo.cookie.MGenericServlet</servlet-class>
+        <init-param>
+            <param-name>author</param-name>
+            <param-value>ange</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MGenericServlet</servlet-name>
+        <url-pattern>/mGenericServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CookieServlet</servlet-name>
+        <servlet-class>com.demo.cookie.CookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieServlet</servlet-name>
+        <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>BookShopServlet</servlet-name>
+        <servlet-class>com.demo.cookie.BookShopServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookShopServlet</servlet-name>
+        <url-pattern>/bookShopServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ChooseBookServlet</servlet-name>
+        <servlet-class>com.demo.cookie.ChooseBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChooseBookServlet</servlet-name>
+        <url-pattern>/chooseBookServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>com.demo.cookie.SessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/sessionServlet</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/errors/error.jsp</location>
+    </error-page>
+</web-app>
